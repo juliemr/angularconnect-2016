@@ -1,4 +1,5 @@
 node_modules/
 built/
 dist/
+dist-e2e/
 npm-debug.log

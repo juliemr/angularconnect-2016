@@ -14,7 +14,9 @@
     "build": "tsc -p src && npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
     "serve": "http-server -p 9095 -c-1",
-    "test": "karma start config/karma.conf.js"
+    "test": "karma start config/karma.conf.js",
+    "init-e2e": "webdriver-manager update",
+    "e2e": "tsc -p e2e && protractor config/protractor.conf.js"
   },
   "dependencies": {
     "@angular/common": "2.0.1",
@@ -43,6 +45,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "rimraf": "^2.4.3",
-    "typescript": "2.0.3"
+    "typescript": "2.0.3",
+    "protractor": "4.0.9"
   }
 }
