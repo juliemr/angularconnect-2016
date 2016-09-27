@@ -8,11 +8,9 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "built/"
+    "outDir": "dist/"
   },
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+    "node_modules"
   ]
 }

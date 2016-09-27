@@ -15,7 +15,7 @@ function isSpecFile(path) {
 }
 
 function isBuiltFile(path) {
-  var builtPath = '/base/built/';
+  var builtPath = '/base/dist/';
   return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
 }
 
@@ -35,7 +35,7 @@ System.config(
     'npm:': 'node_modules/'
   },
   map: {
-    'app': 'built',
+    'app': 'dist',
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
     '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
