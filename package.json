@@ -11,7 +11,7 @@
     "clean": "rimraf dist/",
     "copy": "cp src/{index.html,styles.css,system-config.js} dist/",
     "copytemplates": "cp src/app/{*.html,*.css} dist/app/",
-    "build": "tsc && npm run copy && npm run copytemplates",
+    "build": "tsc -p src && npm run copy && npm run copytemplates",
     "watch": "tsc --watch",
     "serve": "http-server -p 9095 -c-1",
     "test": "karma start config/karma.conf.js"
