@@ -1,7 +1,7 @@
 module.exports = function(config) {
   config.set({
 
-    basePath: '',
+    basePath: '..',
 
     frameworks: ['jasmine'],
 
@@ -28,7 +28,7 @@ module.exports = function(config) {
       { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
 
 
-      {pattern: 'karma-test-shim.js', included: true, watched: true},
+      {pattern: 'config/karma-test-shim.js', included: true, watched: true},
 
       // paths loaded via module imports
       // Angular itself
