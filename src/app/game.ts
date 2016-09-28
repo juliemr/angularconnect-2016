@@ -5,15 +5,22 @@ import {Component} from '@angular/core';
   template: `
     <div>Player X: {{playerX}}</div><div>Player O: {{playerO}}</div>
     <ttt-board (endgame)="handleEndgame($event)"></ttt-board>
+    <div><span class="outcome">{{outcome}}</span></div>
   `,
 })
 export class GameComponent {
   
   public playerX = 'Jane';
   public playerO = 'Elizabeth';
+  public outcome: string;
 
-  handleEndgame(event) {
-    console.log('endgame:' );
-    console.log(event);
+  handleEndgame(endgame) {
+    if (endgame == '_') {
+      this.outcome = 'Tie!';
+    } else if (endgame == 'x') {
+      this.outcome = this.playerX + ' wins!';
+    } else if (endgame == 'o') {
+      this.outcome = this.playerO + ' wins!';
+    }
   }
 }
