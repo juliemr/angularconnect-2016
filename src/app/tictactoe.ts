@@ -132,7 +132,6 @@ export class Board {
       }
     }
     if (full) {
-      this.turnswap.emit('_');
       return this.emitWinner('_');
     }
     return null;

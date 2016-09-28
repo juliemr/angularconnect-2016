@@ -39,10 +39,6 @@ export class GameComponent {
   public oTurn = false;
 
   swapActive(player) {
-    if (player == '_') {
-      this.xTurn = this.oTurn = false;
-    }
-
     if (player == 'x') {
       this.xTurn = true;
       this.oTurn = false;
@@ -55,8 +51,6 @@ export class GameComponent {
   }
 
   reset() {
-    this.xTurn = true;
-    this.oTurn = false;
     this.outcome = '';
     this.board.reset();
   }

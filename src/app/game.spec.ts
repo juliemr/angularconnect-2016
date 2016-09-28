@@ -46,11 +46,11 @@ describe('Game UI', () => {
 
     expect(fixture.nativeElement.textContent).toContain('Elizabeth\'s turn');
   });
-
+  
   it('should bind to player name', () => {
     let fixture = TestBed.createComponent(GameComponent);
     fixture.detectChanges();
-
+    
     expect(fixture.nativeElement.textContent).toContain('Jane\'s turn');
     
     fixture.componentInstance.playerX = 'Eddie';
