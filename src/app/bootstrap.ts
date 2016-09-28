@@ -1,15 +1,13 @@
 import {NgModule} from '@angular/core';
-import {UserService} from './user-service';
 import {AppComponent} from './app-component';
-import {LoginService} from './login-service';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {GreetingComponent} from './greeting-component';
-import {BorderComponent} from './border-component';
+import {Board} from './tictactoe';
+import {GameComponent} from './game';
+
 
 @NgModule({
-  declarations: [AppComponent, GreetingComponent, BorderComponent],
-  providers: [LoginService, UserService],
+  declarations: [AppComponent, Board, GameComponent],
   imports: [BrowserModule],
   bootstrap: [AppComponent],
 })

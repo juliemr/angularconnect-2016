@@ -1,0 +1,5 @@
+<div *ngFor="let row of rows; let i=index" class="ttt-row" [class.selected]="selectedRow == i + 1">
+    <button *ngFor = "let col of columns" class="ttt-box" (click)="handleCheck(row, col)">
+        {{getOwner(row, col)}}
+    </button>
+</div>
