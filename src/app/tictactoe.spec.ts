@@ -86,7 +86,7 @@ describe('Tic-Tac-Toe board', () => {
     let fixture = TestBed.createComponent(Board);
     fixture.detectChanges();
 
-    let board = fixture.debugElement.nativeElement;
+    let board = fixture.nativeElement;
     let box = board.querySelectorAll('.ttt-box')[0];
     
     expect(box.textContent).toContain('_');
@@ -113,7 +113,7 @@ describe('Tic-Tac-Toe board', () => {
     window.dispatchEvent(event3);
     fixture.detectChanges();
 
-    let board = fixture.debugElement.nativeElement;
+    let board = fixture.nativeElement;
     let box = board.querySelectorAll('.ttt-box')[2];
 
     expect(box.textContent).toContain('x');

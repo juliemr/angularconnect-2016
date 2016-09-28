@@ -1,7 +1,13 @@
 h2 { color: #444; font-weight: lighter; }
 body { margin: 2em; }
-body, input[text], button { color: #888; font-family: Cambria, Georgia; }
-button {padding: 0.2em; font-size: 14px}
+body, input[text], button { color: #444; font-family: Cambria, Georgia; font-size: 36px}
+input {
+  font-size: 30px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #888;
+}
 div {
   margin: 0;
   padding: 0;

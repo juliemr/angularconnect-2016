@@ -7,6 +7,7 @@ import {Component, Output, EventEmitter, HostListener} from '@angular/core';
 })
 export class Board {
   @Output() endgame = new EventEmitter<string>();
+  @Output() turnswap = new EventEmitter<string>();
 
   public rows: number[];
   public columns: number[];
@@ -40,13 +41,13 @@ export class Board {
     if (this.grid[row - 1][col - 1] == '_') {
       this.grid[row - 1][col - 1] = this.player;
       this.player = this.player == 'x' ? 'o' : 'x';
+      this.turnswap.emit(this.player);
     }
     this.checkForEndgame(this.grid);
   }
 
   @HostListener('window:keydown', ['$event'])
   handleKeydown(event) {
-    console.log(event);
     let numberKey;
     if (event.keyCode) {
       numberKey = event.keyCode - 48;
@@ -131,6 +132,7 @@ export class Board {
       }
     }
     if (full) {
+      this.turnswap.emit('_');
       return this.emitWinner('_');
     }
     return null;
